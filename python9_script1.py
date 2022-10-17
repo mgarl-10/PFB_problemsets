@@ -8,7 +8,8 @@ try:
  print("User provided file name:",file1)
  if not file1.endswith(('.fa','.fasta','.nt')):
    raise ValueError("Not a FASTA file")
- if 
+ if file1 != (('A'),('T'),('G'),('C'),('N')):
+   raise ValueError("Not nucleotides found") 
  FASTA=open(file1,"r")
  for line in FASTA:
    print(line)
@@ -16,6 +17,7 @@ except IndexError:
   print('Please provide a file name')
 except IOError as ex:
   print("Can't find file:",file1,':',ex.strerror)
+
 
 seqs={}
 with open(file1,"r") as file2:

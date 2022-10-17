@@ -16,8 +16,23 @@ def new_lines(dna,widt):
   print(dna[start:end])  
   start+=int(widt)
   end+=int(widt)
-  
 print(new_lines(file1,width))
 
+def GC_content(dna):
+  c_counts=dna.count('C')
+  g_counts=dna.count('G')
+  dna_len=len(dna)
+  gc_content=(c_counts+g_counts)/dna_len
+  return(f'{gc_content:.2%}')
 
+def reverse_complement(dna):
+    dna_lower=dna.lower()
+    dna_replacing_A=dna_lower.replace("a","T") 
+    dna_replacing_T=dna_replacing_A.replace("t","A")
+    dna_replacing_G=dna_replacing_T.replace("g","C")
+    dna_replacing_C=dna_replacing_G.replace("c","G") 
+    dna_reverse=dna_replacing_C[::-1]
+    return(dna_reverse)
 
+print('The GC content of this sequence is:',GC_content(file1))
+print('Reverse sequence:'+ '\n'+ reverse_complement(file1))

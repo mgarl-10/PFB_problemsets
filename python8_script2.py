@@ -5,7 +5,7 @@ file1=sys.argv[1]
 seqs={}
 
 
-with open(file1,"r") as file2:
+with open(file1,"r") as file2, open("Python_08.codons-3frames.nt","w") as seq_write:
   for line in file2:
     line=line.rstrip()
     if re.search(r'^>',line):
@@ -29,5 +29,7 @@ for sequence in sequences:
     res[-1].append(codons)
     start+=3
     end+=3
-for index, it in enumerate(ids):
-  print(f'{it}-frame-1-codons\n{res[index]}') 
+with open(file1,"r") as file2, open("Python_08.codons-3frames.nt","w") as seq_write:
+  for index, it in enumerate(ids):
+    seq_write.write(it+'-frame-1-codons\n'+str(res[index]))
+

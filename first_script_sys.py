@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import sys
 name1=sys.argv[1]
 color1=sys.argv[2]

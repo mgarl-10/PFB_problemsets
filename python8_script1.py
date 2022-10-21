@@ -23,5 +23,5 @@ for it in seqs:
   for nt in unique:
     dictionary_counts[it]['nt_comp'][nt]=seq.count(nt)
 
-print(dictionary_counts)
+
 

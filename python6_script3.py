@@ -17,5 +17,5 @@ seq_file_obj.close()
 with open(file1,"r") as seq_file_obj, open("Python_06_uc.txt", "w") as seq_write:
   for line in seq_file_obj:
     line=line.upper().rstrip() 
-    seq_write.write(line)
+    seq_write.write(line + "\n")
 

@@ -12,7 +12,7 @@ print(genes)
 
 for gene in genes:
   gene_ids=gene
-  print(gene_ids)
+  print(">"+gene_ids)
   seq=genes[gene]
   print(seq)
   dna_lower=seq.lower()

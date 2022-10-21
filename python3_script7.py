@@ -9,5 +9,4 @@ dna_replacing_G=dna_replacing_T.replace("g","C")
 dna_replacing_C=dna_replacing_G.replace("c","G") 
 dna_reverse=dna_replacing_C[::-1]
 
-print(f"The reverse complement of {dna} is {dna_reverse}")
-
+print(f"Original sequence 5'{dna} 3'\nComplement 3'{dna_replacing_C} 5'\nReverse complement 5'{dna_reverse} 3'")

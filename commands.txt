@@ -1,0 +1,13 @@
+grep '>' sequences.nt.fa | wc -l
+
+sort -n -k 10 -r cuffdiff.txtsort -n -k 10 -r cuffdiff.txt > sorted.cuffdiff.out
+
+head -100 sorted.cuffdiff.out > top100.sorted.cuffdiff.out
+
+sort -k 3 top100.sorted.cuffdiff.out | uniq > differentially.expressed.genes.txt
+
+cut  -f 1 differentially.expressed.genes.txt > differentially.expressed.genes_1.txt
+
+mv differentially.expressed.genes_1.txt differentially.expressed.genes.txt
+
+

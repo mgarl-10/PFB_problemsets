@@ -1,0 +1,16 @@
+  281  git push
+  282  git rm oops2
+  283  git commit -m 'removing oops2'
+  284  git push
+  285  ls
+  286  ls
+  287  man history
+  288  man history
+  289  history
+  290  history -a
+  291  history -w  unixBasics.history.txt
+  292  unixBasics.history.txt
+  293  more unixBasics.history.txt
+  294  help history
+  295  history -a unixBasics.history.txt
+  296  more unixBasics.history.txt
